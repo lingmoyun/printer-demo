@@ -1,0 +1,9 @@
+[submodule "wx-miniprogram"]
+	path = wx-miniprogram
+	url = https://github.com/lingmoyun/printer-demo-wx-miniprogram.git
+[submodule "uni-app"]
+	path = uni-app
+	url = https://github.com/lingmoyun/printer-demo-uni-app.git
+[submodule "android"]
+	path = android
+	url = https://github.com/lingmoyun/printer-demo-android.git
