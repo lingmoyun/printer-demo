@@ -3,32 +3,37 @@
 
 零墨云旗下打印机Demo汇总
 
-
-## Android Demo
-
-- [printer-demo-android][1]
-
-[1]: https://github.com/lingmoyun/printer-demo-android
-
-
-## uni-app Demo
-
-- [printer-demo-uni-app(HBuilderX版本)][1]
-- [printer-demo-uni-app(NodeJS版本)][2]
-
-[1]: https://github.com/lingmoyun/printer-demo-uni-app
-[2]: https://github.com/lingmoyun/printer-demo-uni-app/tree/nodejs
+| Demo    | Bluetooth | TCP/IP | USB | 备注              |
+|---------|:---------:|:------:|:---:|-----------------|
+| Android |     ✓     |   ✓    | 开发中 | Bluetooth SPP模式 |
+| uni-app |     ✓     |   ×    |  ×  | Bluetooth BLE模式 |
+| 微信小程序   |     ✓     |   ×    |  ×  | Bluetooth BLE模式 |
+| 企业微信H5  |     ✓     |   ×    |  ×  | Bluetooth BLE模式 |
 
 
-## 微信小程序Demo
+## Android
 
-- [printer-demo-wx-miniprogram][1]
-
-[1]: https://github.com/lingmoyun/printer-demo-wx-miniprogram
+- [printer-demo-android][android]
 
 
-## 企业微信H5 Demo
+## uni-app
 
-- [printer-demo-wx-cp-h5][1]
+- [printer-demo-uni-app(HBuilderX版本)][uni-app]
+- [printer-demo-uni-app(NodeJS版本)][uni-app-nodejs]
 
-[1]: https://github.com/lingmoyun/printer-demo-wx-cp-h5
+
+## 微信小程序
+
+- [printer-demo-wx-miniprogram][wx-miniprogram]
+
+
+## 企业微信H5
+
+- [printer-demo-wx-cp-h5][wx-cp-h5]
+
+
+[android]: https://github.com/lingmoyun/printer-demo-android
+[uni-app]: https://github.com/lingmoyun/printer-demo-uni-app
+[uni-app-nodejs]: https://github.com/lingmoyun/printer-demo-uni-app/tree/nodejs
+[wx-miniprogram]: https://github.com/lingmoyun/printer-demo-wx-miniprogram
+[wx-cp-h5]: https://github.com/lingmoyun/printer-demo-wx-cp-h5
