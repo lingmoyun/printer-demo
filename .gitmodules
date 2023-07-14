@@ -7,3 +7,6 @@
 [submodule "android"]
 	path = android
 	url = https://github.com/lingmoyun/printer-demo-android.git
+[submodule "wx-cp-h5"]
+	path = wx-cp-h5
+	url = https://github.com/lingmoyun/printer-demo-wx-cp-h5.git
