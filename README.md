@@ -3,12 +3,12 @@
 
 零墨云旗下打印机Demo汇总
 
-| Demo    | Bluetooth | TCP/IP | USB | 备注              |
-|---------|:---------:|:------:|:---:|-----------------|
-| Android |     ✓     |   ✓    | 开发中 | Bluetooth SPP模式 |
-| uni-app |     ✓     |   ×    |  ×  | Bluetooth BLE模式 |
-| 微信小程序   |     ✓     |   ×    |  ×  | Bluetooth BLE模式 |
-| 企业微信H5  |     ✓     |   ×    |  ×  | Bluetooth BLE模式 |
+| Demo                    | Bluetooth | TCP/IP | USB | 备注            |
+|-------------------------|:---------:|:------:|:---:|---------------|
+| [Android][android]      |     ✓     |   ✓    |  ✓  | Bluetooth SPP |
+| [uni-app][uni-app]      |     ✓     |   ×    |  ×  | Bluetooth BLE |
+| [微信小程序][wx-miniprogram] |     ✓     |   ×    |  ×  | Bluetooth BLE |
+| [企业微信H5][wx-cp-h5]      |     ✓     |   ×    |  ×  | Bluetooth BLE |
 
 
 ## Android
