@@ -4,12 +4,19 @@
 
 零墨云旗下打印机Demo汇总
 
-| Demo                | Bluetooth | TCP/IP | USB | 备注                  |
-|---------------------|:---------:|:------:|:---:|---------------------|
-| [Android](#Android) |     ✓     |   ✓    |  ✓  | Bluetooth BLE & SPP |
-| [uni-app](#uni-app) |     ✓     |   ×    |  ×  | Bluetooth BLE       |
-| [微信小程序](#微信小程序)     |     ✓     |   ×    |  ×  | Bluetooth BLE       |
-| [企业微信H5](#企业微信H5)   |     ✓     |   ×    |  ×  | Bluetooth BLE       |
+|                               Demo                                | BLE | Bluetooth SPP | TCP/IP | USB | 备注                                                                                                |
+|:-----------------------------------------------------------------:|:---:|:-------------:|:------:|:---:|---------------------------------------------------------------------------------------------------|
+|   [Android](https://github.com/lingmoyun/printer-demo-android)    |  ✓  |       ✓       |   ✓    |  ✓  | 蓝牙推荐使用`BLE`，打印机全系列支持                                                                              |
+|   [uni-app](https://github.com/lingmoyun/printer-demo-uni-app)    |  ✓  |       ×       |   ×    |  ×  | 默认为HBuilderX格式的项目结构，[NodeJS项目结构点我](https://github.com/lingmoyun/printer-demo-uni-app/tree/nodejs) |
+| [微信小程序](https://github.com/lingmoyun/printer-demo-wx-miniprogram) |  ✓  |       ×       |   ×    |  ×  |                                                                                                   |
+|   [企业微信H5](https://github.com/lingmoyun/printer-demo-wx-cp-h5)    |  ✓  |       ×       |   ×    |  ×  |                                                                                                   |
+|                              Flutter                              |  -  |       -       |   -    |  -  | 如需Flutter二开请联系我们                                                                                  |
+|                                iOS                                |  -  |       -       |   -    |  -  | 如需iOS二开请联系我们                                                                                      |
+|                          HarmonyOS Next                           |  -  |       -       |   -    |  -  | 筹备中                                                                                               |
+* BLE: Bluetooth Low Energy 低功耗蓝牙，全系列打印机均支持。
+* SPP: Serial Port Profile，经典蓝牙，部分打印机支持。
+* TCP/IP: TCP/IP协议，适合局域网打印。
+* USB: 目前仅Android系统支持USB打印。
 
 ## 对接注意事项
 
@@ -20,11 +27,12 @@ A4打印机均采用**图形打印**方式，所以需要把要打印的内容�
 
 ### 打印流程
 
-* 把要打印的文件(Word、Excel、PDF等)转为转换**黑白图片**，或直接按照模板绘制一张**黑白图片**。【各DEMO中有绘制图形打印示例】
-* 使用`CPCL`SDK把`图片`转换为`CPCL`指令
-* 通过蓝牙(推荐BLE）、TCP/IP、USB扫描并连接打印机
-* 把`CPCL`指令发送到打印机。
-* 打印完成。
+1. **准备图片：** 非图片文件(如Word、Excel、PDF等)先转为转换**黑白图片**，模板打印可以使用`canvas`绘制一张**黑白图片**
+   。【各DEMO中有绘制图形打印示例】
+2. **图片转指令：** 使用`CPCL`SDK把`图片`转换为`CPCL`指令
+3. **扫描并连接打印机：** 通过蓝牙(BLE、SPP）、TCP/IP、USB扫描并连接打印机，蓝牙推荐使用BLE，全系列打印机支持。
+4. **下发指令：** 把第2步的`CPCL`指令发送到打印机。
+5. **打印完成** 。
 
 ### 打印机DPI和图片大小的关系
 
@@ -37,7 +45,7 @@ A4打印机均采用**图形打印**方式，所以需要把要打印的内容�
 * 使用公式计算：dots(px)=mm*dpi/25.4
 * 简化算法：
     - 203DPI：1mm=8dots(px)
-    - 300DPI：1mm=12dots(px)
+    - 300DPI：1mm=11.8dots(px)
     - 只使用整数部分。例如 2 mm = 23.6 dots 则将使用 23 dots。
 
 **常用示例：**
@@ -97,32 +105,3 @@ function scale(image, targetWidth, targetHeight) {
     1. 纸张漏出的部分不要超过2cm合上盖子。
     2. 长按大键3秒后松开，打印机自动学习纸张。
     3. 然后开盖把纸张卷回去，然后露出部分不要超过2cm合上盖子使用。
-
-## Demos
-
-### Android
-
-- [printer-demo-android][android]
-
-### uni-app
-
-- [printer-demo-uni-app(HBuilderX版本)][uni-app]
-- [printer-demo-uni-app(NodeJS版本)][uni-app-nodejs]
-
-### 微信小程序
-
-- [printer-demo-wx-miniprogram][wx-miniprogram]
-
-### 企业微信H5
-
-- [printer-demo-wx-cp-h5][wx-cp-h5]
-
-[android]: https://github.com/lingmoyun/printer-demo-android
-
-[uni-app]: https://github.com/lingmoyun/printer-demo-uni-app
-
-[uni-app-nodejs]: https://github.com/lingmoyun/printer-demo-uni-app/tree/nodejs
-
-[wx-miniprogram]: https://github.com/lingmoyun/printer-demo-wx-miniprogram
-
-[wx-cp-h5]: https://github.com/lingmoyun/printer-demo-wx-cp-h5
