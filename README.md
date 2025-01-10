@@ -83,9 +83,9 @@ A4打印机均采用**图形打印**方式，所以需要把要打印的内容�
 function scale(image, targetWidth, targetHeight) {
     originalWidth = image.width;
     originalHeight = image.height;
-    widthRatio = originalWidth / originalWidth;
-    heightRatio = originalHeight / originalHeight;
-    if (widthRatio > heightRatio) {
+    widthRatio = targetWidth / originalWidth;
+    heightRatio = targetHeight / originalHeight;
+    if (widthRatio < heightRatio) {
         resize(image, targetWidth, originalHeight * widthRatio);
     } else {
         resize(image, originalWidth * heightRatio, targetHeight);
