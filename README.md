@@ -7,7 +7,7 @@
 |                               Demo                                | BLE | Bluetooth SPP | TCP/IP | USB | 备注                                                                                                |
 |:-----------------------------------------------------------------:|:---:|:-------------:|:------:|:---:|---------------------------------------------------------------------------------------------------|
 |   [Android](https://github.com/lingmoyun/printer-demo-android)    |  ✓  |       ✓       |   ✓    |  ✓  | 蓝牙推荐使用`BLE`，打印机全系列支持                                                                              |
-|   [uni-app](https://github.com/lingmoyun/printer-demo-uni-app)    |  ✓  |       ×       |   ×    |  ×  | 默认为HBuilderX格式的项目结构，[NodeJS项目结构点我](https://github.com/lingmoyun/printer-demo-uni-app/tree/nodejs) |
+|   [uni-app](https://github.com/lingmoyun/printer-demo-uni-app)    |  ✓  |       -       |   -    |  -  | 默认为HBuilderX格式的项目结构，[NodeJS项目结构点我](https://github.com/lingmoyun/printer-demo-uni-app/tree/nodejs) |
 | [微信小程序](https://github.com/lingmoyun/printer-demo-wx-miniprogram) |  ✓  |       ×       |   ×    |  ×  |                                                                                                   |
 |   [企业微信H5](https://github.com/lingmoyun/printer-demo-wx-cp-h5)    |  ✓  |       ×       |   ×    |  ×  |                                                                                                   |
 |                              Flutter                              |  -  |       -       |   -    |  -  | 如需Flutter二开请联系我们                                                                                  |
